@@ -19,7 +19,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 @EnableJpaRepositories(entityManagerFactoryRef = "entityManagerFactory",
         transactionManagerRef = "transactionManager",
         basePackages = {"com.dynamicqueryproject.repo"})
-@ComponentScan(basePackages = { "com.dynamicqueryproject.services" })
 public class AppConfig {
 
     @Bean(name = "entityManagerFactory")
