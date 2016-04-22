@@ -63,8 +63,10 @@ public class StoreRepositoryTest {
     }
     
     
+    
+    
     @Test
-    public void testFindByNameOrDescription() throws Exception 
+    public void testFindByNameOrDescriptionQuery() throws Exception 
     {
         mockMvc.perform(MockMvcRequestBuilders.get("/dynamicQuery/api/store?search=mike"))
                 .andExpect(status().isOk()).andDo(print())
@@ -80,28 +82,13 @@ public class StoreRepositoryTest {
     }
     
     
-    
-    /*
-    
     @Test
-    public void restGetStoreProductsEmbeddedWithProjection() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/synthapp/api/store?projection=inlineCategories"))
-                .andExpect(status().isOk()).andDo(print())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));  
+    public void testStoreListOData() throws Exception 
+    {
+        mockMvc.perform(MockMvcRequestBuilders.get("/dynamicQuery/api/store.svc/"))
+                .andExpect(status().isOk()).andDo(print());  
     }
     
-    @Test
-    public void restGetProductsOnlyWithProjection() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/synthapp/api/productCategory?projection=inlineChildren"))
-                .andExpect(status().isOk()).andDo(print())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));  
-    }
     
-    @Test
-    public void restGetProductsOnlyWithoutProjection() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/synthapp/api/productCategory"))
-                .andExpect(status().isOk()).andDo(print())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));  
-    }
-   */
+    
 }

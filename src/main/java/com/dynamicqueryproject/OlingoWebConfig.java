@@ -4,10 +4,8 @@ package com.dynamicqueryproject;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-@Configuration
 public class OlingoWebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     
