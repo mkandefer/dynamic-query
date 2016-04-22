@@ -28,13 +28,13 @@ public class StoreController {
     @Autowired
     private StoreSearchService storeService;
     
-    @RequestMapping(method = RequestMethod.GET, value = STORES_URI_PATH)
+    @RequestMapping(method = RequestMethod.GET, value = STORES_URI_PATH + "/search")
     @ResponseBody
-    public Iterable<Store> search(@RequestParam(value = "search") String search) {
-        if(search == null || search.equals("")) {
+    public Iterable<Store> search(@RequestParam(value = "filter") String filter) {
+        if(filter == null || filter.equals("")) {
             return storeService.findAll();
         } else {
-            return storeService.findBySearchTerm(search);
+            return storeService.findBySearchTerm(filter);
         }
     }
 }
