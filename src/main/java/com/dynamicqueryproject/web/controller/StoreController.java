@@ -6,7 +6,7 @@
 package com.dynamicqueryproject.web.controller;
 
 import com.dynamicqueryproject.domain.Store;
-import com.dynamicqueryproject.query.services.StoreSearchService;
+import com.dynamicqueryproject.query.service.StoreSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.BasePathAwareController;
 import org.springframework.hateoas.ExposesResourceFor;

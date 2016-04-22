@@ -5,15 +5,15 @@
  */
 package com.dynamicqueryproject.query.service;
 
-import com.dynamicqueryproject.domain.Store;
+import com.dynamicqueryproject.domain.ProductCategory;
 
 /**
  *
  * @author mkandefer
  */
-public interface StoreSearchService {
+public interface ProductCategorySearchService {
  
-    Iterable<Store> findBySearchTerm(String searchTerm);
+    Iterable<ProductCategory> findBySearchTerm(String searchTerm);
     
-    Iterable<Store> findAll();
+    Iterable<ProductCategory> findAll();
 }

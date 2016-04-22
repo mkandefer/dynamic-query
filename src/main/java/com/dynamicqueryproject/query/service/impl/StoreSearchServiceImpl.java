@@ -7,7 +7,7 @@ package com.dynamicqueryproject.query.service.impl;
 
 import com.dynamicqueryproject.domain.Store;
 import com.dynamicqueryproject.query.StorePredicates;
-import com.dynamicqueryproject.query.services.StoreSearchService;
+import com.dynamicqueryproject.query.service.StoreSearchService;
 import com.dynamicqueryproject.repo.StoreRepository;
 import com.mysema.query.types.Predicate;
 import org.springframework.beans.factory.annotation.Autowired;
