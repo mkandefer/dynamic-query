@@ -9,11 +9,15 @@ import javax.persistence.Entity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.reflections.Reflections;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = {"com.dynamicqueryproject.query.service", "com.dynamicqueryproject.web.controller"})
 public class RestConfig extends RepositoryRestMvcConfiguration {
 
     private static final Logger log = LogManager.getLogger();

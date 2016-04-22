@@ -18,6 +18,7 @@
         <apache.commons.io>2.4</apache.commons.io>
         <spring.framework.version>4.2.4.RELEASE</spring.framework.version>
         <querydsl.version>3.7.2</querydsl.version>
+        <olingo.project.version>2.0.6</olingo.project.version>
     </properties>
 
 
@@ -213,6 +214,7 @@
             <version>0.9.9-RC2</version>
         </dependency>
         
+        <!-- Query DSL -->
         <dependency>
             <groupId>com.mysema.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
@@ -225,6 +227,34 @@
             <artifactId>querydsl-jpa</artifactId>
             <version>${querydsl.version}</version>
         </dependency>
+
+        <!-- Olingo and Server -->
+        
+      <dependency>
+           <groupId>org.apache.olingo</groupId>
+           <artifactId>olingo-odata2-core</artifactId>
+           <version>${olingo.project.version}</version>
+         </dependency>
+         <dependency>
+           <groupId>org.apache.olingo</groupId>
+           <artifactId>olingo-odata2-api</artifactId>
+           <version>${olingo.project.version}</version>
+         </dependency>
+         <dependency>
+           <groupId>org.apache.olingo</groupId>
+           <artifactId>olingo-odata2-jpa-processor-api</artifactId>
+           <version>${olingo.project.version}</version>
+         </dependency>
+         <dependency>
+           <groupId>org.apache.olingo</groupId>
+           <artifactId>olingo-odata2-jpa-processor-core</artifactId>
+           <version>${olingo.project.version}</version>
+         </dependency>
+         <dependency>
+           <groupId>org.apache.olingo</groupId>
+           <artifactId>olingo-odata2-jpa-processor-ref</artifactId>
+           <version>${olingo.project.version}</version>
+         </dependency>
 
     </dependencies>
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dynamicqueryproject.controller;
+package com.dynamicqueryproject.web.controller;
 
 import com.dynamicqueryproject.domain.Store;
 import com.dynamicqueryproject.query.services.StoreSearchService;
@@ -31,6 +31,10 @@ public class StoreController {
     @RequestMapping(method = RequestMethod.GET, value = STORES_URI_PATH)
     @ResponseBody
     public Iterable<Store> search(@RequestParam(value = "search") String search) {
-        return storeService.findBySearchTerm(search);
+        if(search == null || search.equals("")) {
+            return storeService.findAll();
+        } else {
+            return storeService.findBySearchTerm(search);
+        }
     }
 }

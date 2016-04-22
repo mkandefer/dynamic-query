@@ -2,6 +2,7 @@ package com.dynamicqueryproject.domain;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -10,8 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Table(name = "product_category")
@@ -27,6 +26,7 @@ public class ProductCategory extends BaseEntity {
     
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="store_id", nullable = true)
+    @JsonIgnore
     private Store store;
     
     

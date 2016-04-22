@@ -1,7 +1,6 @@
 package com.dynamicqueryproject.repo;
 
 import com.dynamicqueryproject.domain.Store;
-import com.dynamicqueryproject.query.services.StoreSearchService;
 import java.util.Optional;
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -75,7 +74,7 @@ public class StoreRepositoryTest {
     
     @Test
     public void restGetStores() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/dynamicQuery/api/store"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/dynamicQuery/api/store?search="))
                 .andExpect(status().isOk()).andDo(print())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));  
     }

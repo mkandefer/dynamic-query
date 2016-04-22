@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dynamicqueryproject.query.services.impl;
+package com.dynamicqueryproject.query.service.impl;
 
 import com.dynamicqueryproject.domain.Store;
 import com.dynamicqueryproject.query.StorePredicates;
@@ -29,6 +29,11 @@ public class StoreSearchServiceImpl implements StoreSearchService {
         Predicate searchPred = StorePredicates.nameOrDescriptionContainsIgnoreCase(searchTerm);
         Iterable<Store> searchResults = repository.findAll(searchPred);
         return searchResults;
+    }
+
+    @Override
+    public Iterable<Store> findAll() {
+        return repository.findAll();
     }
 
 }
