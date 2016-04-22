@@ -31,7 +31,7 @@ public class RestConfig extends RepositoryRestMvcConfiguration {
             config.setReturnBodyOnCreate(true)
                     .setReturnBodyOnUpdate(false)
                     .exposeIdsFor(idExposedClasses.toArray(new Class[idExposedClasses.size()])).setDefaultMediaType(new org.springframework.http.MediaType("application", "json", Charset.defaultCharset()));
-            config.setBasePath("/dynamicQuery/api");
+            config.setBasePath("/api");
 
             config.getMetadataConfiguration().setAlpsEnabled(false);
 

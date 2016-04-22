@@ -29,5 +29,9 @@ public final class StorePredicates {
                     .or(QStore.store.name.containsIgnoreCase(searchTerm));
         }
     }
+    
+     public static Predicate productsExceed(int count) {
+         return QStore.store.categories.size().gt(count);
+    }
 
 }

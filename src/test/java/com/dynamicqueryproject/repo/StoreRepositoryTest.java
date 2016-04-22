@@ -68,7 +68,7 @@ public class StoreRepositoryTest {
     @Test
     public void testFindByNameOrDescriptionQuery() throws Exception 
     {
-        mockMvc.perform(MockMvcRequestBuilders.get("/dynamicQuery/api/store?search=mike"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/store?search=mike"))
                 .andExpect(status().isOk()).andDo(print())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));  
     }
@@ -76,19 +76,9 @@ public class StoreRepositoryTest {
     
     @Test
     public void restGetStores() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/dynamicQuery/api/store?search="))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/store?search="))
                 .andExpect(status().isOk()).andDo(print())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON));  
     }
-    
-    
-    @Test
-    public void testStoreListOData() throws Exception 
-    {
-        mockMvc.perform(MockMvcRequestBuilders.get("/dynamicQuery/api/store.svc/"))
-                .andExpect(status().isOk()).andDo(print());  
-    }
-    
-    
-    
+       
 }

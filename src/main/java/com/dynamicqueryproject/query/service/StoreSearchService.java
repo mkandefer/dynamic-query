@@ -16,4 +16,6 @@ public interface StoreSearchService {
     Iterable<Store> findBySearchTerm(String searchTerm);
     
     Iterable<Store> findAll();
+    
+    Iterable<Store> findGreaterThan(int count);
 }

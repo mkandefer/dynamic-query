@@ -36,4 +36,10 @@ public class StoreSearchServiceImpl implements StoreSearchService {
         return repository.findAll();
     }
 
+    @Override
+    public Iterable<Store> findGreaterThan(int count) {
+        Predicate countPred = StorePredicates.productsExceed(count);
+        return repository.findAll(countPred);
+    }
+
 }
